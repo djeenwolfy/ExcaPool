@@ -40,7 +40,7 @@
 
 		<form id="main" v-cloak>
 
-			<h1>Услуги</h1>
+			<h1>Услуги за 1 кубический метр</h1>
 
 			<ul>
 				<li v-for="service in services" v-on:click="toggleActive(service)" v-bind:class="{ 'active': service.active}" >
@@ -56,16 +56,15 @@
 
 			
 
-				<!-- <input type="text" v-model="m3.depth"/>
-				<input type="text" v-model="m3.long"/>
-				<input type="text" v-model="m3.width"/>
-		 <p v-on:click.stop="toggleTooltip">{{m3.depth,}} {{m3.long}} {{m3.width}}</p> -->
+			<div></div>
 			</div>
 		</ul>
 
 		<div class="total">
+			Объем: <span>{{objem() }}</span>
+			<br>
 			<!-- Высчитывает итоговую сумму -->
-			Итого: <span>{{total() | currency}}</span>
+			Итого: <span>{{total()}}&#8399;</span>
 		</div>
 
 	</form>

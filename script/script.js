@@ -16,14 +16,25 @@ var demo = new Vue({
         // по массиву услуг и генерировать элементы списка
         // для каждого вложенного пункта.
         services: [
+                    {
+                name: 'Копка бассейна',
+                price: 1000,
+                active: false
+            },
             {
-                name: 'Площадь',
-                price:  255,
-                active:true
-            },{
-                name: 'Дизайн',
-                price: 400,
-                active:false
+                name: 'Гидроизоляция бассейна',
+                price:  10000,
+                active: false
+            },
+            {
+                name: 'Облицовка бассейна',
+                price: 4500,
+                active: false
+            },
+            {
+                name: 'Работа',
+                price: 1500,
+                active: false
             }
             ],
 
@@ -37,18 +48,18 @@ var demo = new Vue({
         m3:[
         	{	
         		name:"Глубина",
-        		active:false,
-        		qwert:''
+        		active:true,
+        		qwert: 0
         	},
         	{	
         		name:"Длинна",
-        		active:false,
-        		qwert:''
+        		active:true,
+        		qwert: 0
         	},
         	{	
         		name:"Ширина",
-        		active:false,
-        		qwert:''
+        		active:true,
+        		qwert: 0
         	},
        	]
     },
@@ -62,6 +73,17 @@ var demo = new Vue({
         toggleTooltip: function(){
             this.kub_update = !this.kub_update;
         },
+        objem: function(s){
+
+		var	objem = 1;
+
+ 		this.m3.forEach(function(s){
+                if (s.active){
+                    objem= objem*(+s.qwert);
+                }
+        });
+         return objem;
+    	},
         total: function(){
 
             var total = 0;
