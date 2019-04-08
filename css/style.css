@@ -33,3 +33,29 @@
 	min-height: 300px;
 	margin: 20px 4vw;
 }
+#order-btn {
+	text-transform: capitalize;
+	color: #039be5;
+}
+.waves-effect.waves-blue .waves-ripple{
+	background-color: #42A5F5;
+}
+
+ /* label color */
+   .input-field label {
+     color: #000;
+   }
+   /* label focus color */
+   .input-field label:focus {
+     color: #039be5;
+   }
+   /* label underline focus color */
+   .input-field input:focus {
+     border-bottom: 1px solid #039be5;
+     box-shadow: 0 1px 0 0 #039be5;
+   }
+
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #039be5;
+   }
