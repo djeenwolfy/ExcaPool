@@ -8,7 +8,7 @@
 	<link rel="shortcut icon" href="img/minilogo.png">
 	<title>ExcaPool - Наши работы</title>
 </head>
-<body class="Site">
+<body >
 	<!-- Начало header -->
 	<header> 
 		<nav> <!-- Навигация и лого -->
@@ -38,36 +38,28 @@
 	
 	<main class="Site-content">  
 
-		<form id="main" v-cloak>
+		<form id="price" v-cloak>
 
-			<h1>Услуги за 1 кубический метр</h1>
+			<h2 class="center" >Услуги за 1 кубический метр</h2>
 
 			<ul>
-				<li v-for="service in services" v-on:click="toggleActive(service)" v-bind:class="{ 'active': service.active}" >
-			
-				{{service.name}} <span>{{service.price | currency}}
-				</span>
+				<li v-for="service in services" v-on:click="toggleActive(service)" v-bind:class="{ 'active': service.active}">
+					{{service.name}}<span>{{service.price}}&#8381</span>
+				</li>
+				<li  v-for="m3 in m3 "  v-bind:class="{ 'active': m3.active}"><div class="tooltip">
+					{{m3.name}}<span>{{m3.qwert}}</span>
+					<input id="parameters" type="text" v-model="m3.qwert"/>
+				</div>
 			</li>
-			<li  v-for="m3 in m3 " v-on:click="toggleDiscount(m3)" v-bind:class="{ 'active': m3.active}"><div class="tooltip">
-				<input type="text" v-model="m3.qwert"/>
-				{{m3.name}}<span>{{m3.qwert}}</span>
-					</div>
-			</li>
-
-			
-
-			<div></div>
-			</div>
-		</ul>
-
-		<div class="total">
-			Объем: <span>{{objem() }}</span>
-			<br>
-			<!-- Высчитывает итоговую сумму -->
-			Итого: <span>{{total()}}&#8381</span>
 		</div>
+	</ul>
 
-	</form>
+	<div class="total">
+		Объем:	<span>{{objem() }}</span>
+		<br>
+		Итого: <span>{{total()}}&#8381</span>
+	</div>
+</form>
 
 </main>
 
@@ -97,8 +89,6 @@
 	</div>
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
-
-
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
 <script src="script/jquery-3.3.1.min.js"></script>      
 <script src="script/materialize.js"></script> 

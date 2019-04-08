@@ -5,11 +5,9 @@
   	 });
        $('.sidenav').sidenav();
             // Определяем собственный фильтр валют "currency". 
-Vue.filter('currency', function (value) {
-    return '$' + value.toFixed(2);
-});
+
 var demo = new Vue({
-    el: '#main',
+    el: '#price',
     data: {
         
         services: [

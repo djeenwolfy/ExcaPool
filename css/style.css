@@ -57,16 +57,16 @@ section, footer, header, aside, nav{
 	Форма заказа
 --------------------------*/
 
-form{
-	background-color: #61a1bc;
+form#price{
+	background-color: #42A5F5;
 	border-radius: 2px;
 	box-shadow: 0 1px 1px #ccc;
-	width: 400px;
+	width: 66%;
 	padding: 35px 60px;
 	margin: 50px auto;
 }
 
-form h1{
+form#price h2{
 	color:#fff;
 	font-size:64px;
 	font-family:'Cookie', cursive;
@@ -75,7 +75,7 @@ form h1{
 	text-shadow:0 3px 0 rgba(0,0,0,0.1);
 }
 
-form ul{
+form#price ul{
 	list-style:none;
 	color:#fff;
 	font-size:20px;
@@ -84,7 +84,7 @@ form ul{
 	margin:20px 0 15px;
 }
 
-form ul li{
+form#price ul li{
 	padding:20px 30px;
 	background-color:#e35885;
 	margin-bottom:8px;
@@ -92,11 +92,11 @@ form ul li{
 	cursor:pointer;
 }
 
-form ul li span{
+form#price ul li span{
 	float:right;
 }
 
-form ul li.active{
+form#price ul li.active{
 	background-color:#8ec16d;
 }
 
@@ -112,3 +112,19 @@ div.total{
 div.total span{
 	float:right;
 }
+input{
+	list-style:none;
+	color:#fff;
+	font-size:20px;
+	font-weight:bold;
+	text-align: left;
+	margin:20px 0 15px;
+}
+#parameters{
+	border-bottom:2px solid #9E9E9E;
+}
+#parameters:focus{
+	border-bottom: 2px solid #1B71C6;
+	-webkit-box-shadow: none;
+    box-shadow: none; 
+	}  
