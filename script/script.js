@@ -4,6 +4,7 @@
   	 	height: 640
   	 });
        $('.sidenav').sidenav();
+       $('.modal').modal();
             // Определяем собственный фильтр валют "currency". 
 
 var demo = new Vue({

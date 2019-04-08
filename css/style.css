@@ -33,6 +33,13 @@
 	min-height: 300px;
 	margin: 20px 4vw;
 }
+#order-btn {
+	text-transform: capitalize;
+	color: #039be5;
+}
+.waves-effect.waves-blue .waves-ripple{
+	background-color: #42A5F5;
+}
 .card-title {
 	text-shadow: 0 0 5px grey, 0 0 10px grey, 0 0 15px grey, 0 0 15px black, 0 0 30px black, 0 0 35px black, 0 0 45px black, 0 0 60px black;
 }
