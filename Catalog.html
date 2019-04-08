@@ -39,127 +39,23 @@
 	<main class="Site-content">
 		
 		<div class="catalog-block">
-			<div class="row">
-				<div class="col s12 m6 l4 xl3">
-					<div class="card">
-						<div class="card-image">
-						    <img src="img/img1.jpg">
-						    <span class="card-title">Card Title</span>
-						</div>
-						<div class="card-content">
-						    <p>I am a very simple card. I am good at containing small bits of information.
-						    I am convenient because I require little markup to use effectively.</p>
-						</div>
-						<div class="card-action">
-						    <a href="#">This is a link</a>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m6 l4 xl3">
-					<div class="card">
-						<div class="card-image">
-						    <img src="img/img2.jpg">
-						    <span class="card-title">Card Title</span>
-						</div>
-						<div class="card-content">
-						    <p>I am a very simple card. I am good at containing small bits of information.
-						    I am convenient because I require little markup to use effectively.</p>
-						</div>
-						<div class="card-action">
-						    <a href="#">This is a link</a>
+			<div class="row" id="catalog">
+				<li v-for="good in goods">
+					<div class="col s12 m6 l4 xl3">
+						<div class="card">
+							<div class="card-image">
+								<img v-bind:src="good.image">
+								<span class="card-title">{{ good.title }}</span>
+							</div>
+							<div class="card-content">
+								<p>{{ good.cartText }}</p>
+							</div>
+							<div class="card-action">
+								<a href="#contact-form" class="modal-trigger" id="order-btn">Заказать</a>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col s12 m6 l4 xl3">
-					<div class="card">
-						<div class="card-image">
-						    <img src="img/img3.jpg">
-						    <span class="card-title">Card Title</span>
-						</div>
-						<div class="card-content">
-						    <p>I am a very simple card. I am good at containing small bits of information.
-						    I am convenient because I require little markup to use effectively.</p>
-						</div>
-						<div class="card-action">
-						    <a href="#">This is a link</a>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m6 l4 xl3">
-					<div class="card">
-						<div class="card-image">
-						    <img src="img/img4.jpg">
-						    <span class="card-title">Card Title</span>
-						</div>
-						<div class="card-content">
-						    <p>I am a very simple card. I am good at containing small bits of information.
-						    I am convenient because I require little markup to use effectively.</p>
-						</div>
-						<div class="card-action">
-						    <a href="#">This is a link</a>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m6 l4 xl3">
-					<div class="card">
-						<div class="card-image">
-						    <img src="img/img5.jpg">
-						    <span class="card-title">Card Title</span>
-						</div>
-						<div class="card-content">
-						    <p>I am a very simple card. I am good at containing small bits of information.
-						    I am convenient because I require little markup to use effectively.</p>
-						</div>
-						<div class="card-action">
-						    <a href="#">This is a link</a>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m6 l4 xl3">
-					<div class="card">
-						<div class="card-image">
-						    <img src="img/img6.png">
-						    <span class="card-title">Card Title</span>
-						</div>
-						<div class="card-content">
-						    <p>I am a very simple card. I am good at containing small bits of information.
-						    I am convenient because I require little markup to use effectively.</p>
-						</div>
-						<div class="card-action">
-						    <a href="#">This is a link</a>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m6 l4 xl3">
-					<div class="card">
-						<div class="card-image">
-						    <img src="img/img7.jpg">
-						    <span class="card-title">Card Title</span>
-						</div>
-						<div class="card-content">
-						    <p>I am a very simple card. I am good at containing small bits of information.
-						    I am convenient because I require little markup to use effectively.</p>
-						</div>
-						<div class="card-action">
-						    <a href="#">This is a link</a>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m6 l4 xl3">
-					<div class="card">
-						<div class="card-image">
-						    <img src="img/img8.jpg">
-						    <span class="card-title">Card Title</span>
-						</div>
-						<div class="card-content">
-						    <p>I am a very simple card. I am good at containing small bits of information.
-						    I am convenient because I require little markup to use effectively.</p>
-						</div>
-						<div class="card-action">
-						    <a href="#">This is a link</a>
-						</div>
-					</div>
-				</div>
+				</li>	
 			</div>
 		</div>
 	<!-- ========== catalog end============= -->
