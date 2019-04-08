@@ -2,8 +2,15 @@
 	font-family: 'Roboto', sans-serif;
 	padding: 0;
 	margin: 0;
-
 }
+
+/* stick the footer to the bottom*/
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.Site-content {flex: 1;}
 
 /* slider */
 .slider{
@@ -21,16 +28,8 @@
 
 
 /* Catalog style*/
-#catalog-item{
-	margin: 5px 10px;
-	height: 200px;
-	min-width: 210px;
-	border: 1px solid black;
-	padding: 0;
-	overflow: hidden;
-	text-align: center;
-}
 
-.img-item{
-	height: 120%;	
+.catalog-block{
+	min-height: 300px;
+	margin: 20px 4vw;
 }
