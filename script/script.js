@@ -8,13 +8,10 @@
 Vue.filter('currency', function (value) {
     return '$' + value.toFixed(2);
 });
-
 var demo = new Vue({
     el: '#main',
     data: {
-        // Определяем свойства модели, представление будет проходить циклом
-        // по массиву услуг и генерировать элементы списка
-        // для каждого вложенного пункта.
+        
         services: [
                     {
                 name: 'Копка бассейна',
@@ -62,6 +59,7 @@ var demo = new Vue({
         		qwert: 0
         	},
        	]
+
     },
     methods: {
         toggleActive: function(s){
@@ -73,7 +71,7 @@ var demo = new Vue({
         toggleTooltip: function(){
             this.kub_update = !this.kub_update;
         },
-        objem: function(s){
+        objem: function(){
 
 		var	objem = 1;
 
@@ -85,20 +83,26 @@ var demo = new Vue({
          return objem;
     	},
         total: function(){
+        			var	objem = 1;
 
-            var total = 0;
+ 		this.m3.forEach(function(s){
+                if (s.active){
+                    objem= objem*(+s.qwert);
+                }
+        });
+            var koef = 0;
 
             this.services.forEach(function(s){
                 if (s.active){
-                    total+= s.price;
+                    koef+= s.price;
                 }
-           
+           total=koef*objem
             });
 
 
-          if (this.Discount[0].active){
-          total = total/100*(100-this.Discount[0].discount2);
-           }
+          // if (this.Discount[0].active){
+          // total = total/100*(100-this.Discount[0].discount2);
+          //  }
            return total;
         }
     }
