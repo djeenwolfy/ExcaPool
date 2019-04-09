@@ -11,7 +11,7 @@
   flex-direction: column;
 }
 .Site-content {flex: 1;}
-
+/*======================================================*/
 /* header */
 #mainLogo{
 	margin-left: 4vw;
@@ -19,6 +19,7 @@
 #mainMenu{
 	margin-right: 4vw;
 }
+/*======================================================*/
 /* slider */
 .slider{
 	margin-top: 1vh;
@@ -31,6 +32,7 @@
 .slider-images{
 	box-shadow:0 0 0 500px rgba(0, 0, 0, 0.30) inset;
 }
+/*======================================================*/
 /* contacts */
 
 .contacts{
@@ -42,7 +44,7 @@
 	border-left: 1px solid rgba(0, 0, 0, 0.10);
 }
 
-
+/*======================================================*/
 /* Catalog style*/
 
 .catalog-block{
@@ -76,10 +78,37 @@ li{
 .input-field .prefix.active {
      color:#039be5;
    }
+/*======================================================*/
+/* about */
+.about-content{
+	min-height: 300px;
+	margin: 20px 4vw;
+}
+.about-main{
+	margin-right: 5vw;
+}
+.ab-img{
+	margin: 2vw;
+	margin-left: 2vw;
+	width: 400px;
+	height: 250px;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+}
+.underroof{
+	background-image: url(../img/poolunderroof.jpg);	
+}
+.installpool{
+	background-image: url(../img/installingpool.jpg);	
+}
+.bobcat{
+	background-image: url(../img/bobcat.jpg);	
+}
 
-
-
+/*======================================================*/
 /*price style*/
+
 @import url(https://fonts.googleapis.com/css?family=Cookie);
 
 [v-cloak] {
@@ -172,8 +201,8 @@ input{
     box-shadow: none; 
 	}  
 
-
-/* не работают */
+/*======================================================*/
+/* media */
 @media only screen and (max-width: 992px){
 	#mainLogo{
 		margin-left: 0;
