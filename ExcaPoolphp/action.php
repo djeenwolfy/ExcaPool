@@ -4,7 +4,7 @@ $gipadress=$_SERVER['REMOTE_ADDR'];
 $grecaptcha=$_POST['g-recaptcha-response']; 
 $postdata = http_build_query(
 	array(
-		'secret' => '6LcGVZ0UAAAAAI5fla9L-BpgJ4qzVleUoYy2JIXa',
+		'secret' => '*********************',
 		'response' => $grecaptcha,
 		'remoteip' => $gipadress
 	)
