@@ -96,7 +96,7 @@
 								<span class="helper-text" data-error="Введите корректный e-mail адрес" data-success="Данные корректны"></span>
 							</div>
 						</div>
-						<div class="g-recaptcha" data-sitekey="6LcGVZ0UAAAAAAxGA6_U_o8VQ_fAP_LjyI0qmEUt" data-callback="enableBtn()"></div>
+						<div class="g-recaptcha" data-sitekey="****************" data-callback="enableBtn()"></div>
 						<button  onclick="prepare_xml()" type="submit" name="action" class="modal-close waves-effect waves-blue btn-flat" id="sendButton">Отправить</button>
 					</form>
 				</div>
